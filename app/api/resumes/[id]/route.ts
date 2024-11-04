@@ -6,7 +6,6 @@ export async function GET() {
   const resumes = await prisma.resume.findMany({
     include: {
       contact: true,
-      skills: true,
       experience: true,
       projects: true,
       achievements: true,
@@ -23,7 +22,6 @@ export async function POST(request: Request) {
     data,
     include: {
       contact: true,
-      skills: true,
       experience: true,
       projects: true,
       achievements: true,
@@ -32,8 +30,6 @@ export async function POST(request: Request) {
   });
   return NextResponse.json(newResume);
 }
-
-// Update an existing resume
 
 export async function PUT(request: Request) {
   const { id } = await request.json(); // Assuming you send the ID in the request body
@@ -54,7 +50,6 @@ export async function PUT(request: Request) {
       data,
       include: {
         contact: true,
-        skills: true,
         experience: true,
         projects: true,
         achievements: true,
