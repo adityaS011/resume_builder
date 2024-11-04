@@ -1,0 +1,64 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Resume {
+  id             Int             @id @default(autoincrement())
+  name           String
+  contact        Contact[]
+  experience     Experience[]
+  education      String
+  skills         String[]
+  projects       Project[]
+  achievements   Achievement[]
+  certifications Certification[]
+}
+
+model Contact {
+  id       Int    @id @default(autoincrement())
+  type     String
+  value    String
+  resumeId Int
+  resume   Resume @relation(fields: [resumeId], references: [id])
+}
+
+model Experience {
+  id             Int      @id @default(autoincrement())
+  job            String
+  company        String
+  duration       String
+  responsibilities String[]
+  resumeId       Int
+  resume         Resume   @relation(fields: [resumeId], references: [id])
+}
+
+model Project {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  details     String[]
+  resumeId    Int
+  resume      Resume   @relation(fields: [resumeId], references: [id])
+}
+
+model Achievement {
+  id       Int    @id @default(autoincrement())
+  title    String
+  year     String
+  resumeId Int
+  resume   Resume @relation(fields: [resumeId], references: [id])
+}
+
+model Certification {
+  id           Int    @id @default(autoincrement())
+  title        String
+  institution  String
+  year         String
+  resumeId     Int
+  resume       Resume @relation(fields: [resumeId], references: [id])
+}
