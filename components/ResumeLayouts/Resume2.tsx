@@ -19,19 +19,18 @@ const ResumeLayout2 = ({ resume }: { resume: Resume }) => (
     <hr className='border-gray-300 mx-2' />
 
     <section className='px-2'>
-      <h3 className=' font-semibold'>Education</h3>
-      <p className='text-gray-600 text-sm pl-3'>{resume.education}</p>
-      <hr className='border-gray-300 mt-1' />
-    </section>
-
-    <section className='px-2'>
-      <h3 className=' font-semibold'>Technical Skills</h3>
+      <h3 className=' font-semibold'>Skills</h3>
       <ul className='flex flex-row gap-2 text-sm pl-3'>{resume.skills}</ul>
       <hr className='border-gray-300 mt-1' />
     </section>
 
     <section className='px-2'>
-      <h3 className=' font-semibold'>Experience</h3>
+      <h3 className=' font-semibold'>Education</h3>
+      <p className='text-gray-600 text-sm pl-3'>{resume.education}</p>
+      <hr className='border-gray-300 mt-1' />
+    </section>
+    <section className='px-2'>
+      <h3 className=' font-semibold'>Work Experience</h3>
       <ul>
         {resume.experience.map((job, index) => (
           <li key={index} className='mb-2 text-sm'>
