@@ -1,4 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Resume Builder
+
+A modern resume builder application built with **Next.js**, **TypeScript**, **Tailwind CSS**, **Prisma**, **PostgreSQL**, and **Node.js**. This application allows users to create, manage, and customize their resumes seamlessly.
+
+## Table of Contents
+
+- [Features](#features)
+- [Technologies](#technologies)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [API](#api)
+- [Database Schema](#database-schema)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Features
+
+- Create and customize resumes with various sections (contact, experience, education, skills, projects, achievements, certifications).
+- Responsive design with Tailwind CSS.
+- Type-safe API routes using TypeScript and Prisma.
+- Persistent data storage with PostgreSQL.
+- Easy to use and navigate interface.
+
+## Technologies
+
+- **Next.js**: A React framework for server-side rendering and static site generation.
+- **TypeScript**: A superset of JavaScript that adds static types.
+- **Tailwind CSS**: A utility-first CSS framework for creating responsive designs.
+- **Prisma**: A modern ORM for Node.js and TypeScript.
+- **PostgreSQL**: A powerful, open-source relational database.
+- **Node.js**: A JavaScript runtime built on Chrome's V8 engine.
 
 ## Getting Started
 
