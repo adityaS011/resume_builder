@@ -130,10 +130,10 @@ export default function ResumePage() {
   }
 
   return (
-    <div className='container relative mx-auto p-4 mb-20'>
-      <div className='flex flex-row gap-4 '>
+    <div className='relative mx-auto p-4 mb-20 border-t border-l rounded-l border-gray-300 bg-slate-200'>
+      <div className='flex flex-row gap-4 pt-2 '>
         {/* Resume Section */}
-        <div className='border w-3/5 shadow-lg '>
+        <div className='border w-3/5 shadow-lg bg-white '>
           <div
             ref={resumeRef}
             className='w-full '
@@ -144,7 +144,7 @@ export default function ResumePage() {
           </div>
         </div>
         {/* Edit Section */}
-        <div className='top-2 sticky w-2/5 flex flex-col justify-between h-fit min-h-[40rem] p-4 bg-gray-100 rounded-lg'>
+        <div className='top-2 sticky w-2/5 flex flex-col justify-between h-fit min-h-[40rem] p-4 bg-white rounded-lg'>
           <div>
             <h2 className='text-xl font-semibold mb-4'>Edit Resume Details</h2>
             {message && <p className='text-green-600 mb-2'>{message}</p>}
